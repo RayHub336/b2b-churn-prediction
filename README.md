@@ -11,14 +11,14 @@ Antes del modelado predictivo, el análisis de datos reveló los principales cue
 ### Riesgo Operativo por Tipo de Contrato
 Se identificó que el modelo de negocio es altamente vulnerable en los esquemas de corto plazo. La inmensa mayoría de la fuga de clientes se concentra en los contratos "Mes a Mes" (*Month-to-month*), indicando una falta de "candados" de fidelidad o problemas de satisfacción temprana.
 
-![Fuga por Contrato](images/Fuga_de_Clientes_según_Tipo_de_Contrato.png)
+![Fuga por Contrato](images/fuga.png)
 
 ### Perfil de Riesgo: Cargos vs. Antigüedad
 Al evaluar la dispersión operativa, detectamos que el abandono está correlacionado con dos variables críticas:
 1. **Facturación:** Los clientes que abandonan tienen una mediana de cargos mensuales significativamente más alta (~$80 USD).
 2. **Ciclo de Vida:** La ventana de mayor riesgo (cuello de botella de retención) ocurre en los primeros 500 días de antigüedad.
 
-![Distribución Cargos y Antigüedad](images/Distribución_de_Cargos_Mensuales.png)
+![Distribución Cargos y Antigüedad](images/cargos.png)
 
 ## 3. Solución Técnica y Modelado (Improve & Control)
 Para automatizar la detección de estos perfiles de riesgo, se construyó un *pipeline* de Machine Learning:

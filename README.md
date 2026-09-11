@@ -33,3 +33,6 @@ Para automatizar la detección de estos perfiles de riesgo, se construyó un *pi
 *   **Lenguaje:** Python 3
 *   **Manipulación de Datos:** Pandas, NumPy
 *   **Machine Learning:** Scikit-learn, LightGBM
+
+## 5. Arquitectura de Despliegue (AWS EC2)
+El modelo está industrializado mediante **FastAPI** y empaquetado en un contenedor de **Docker**. El archivo `deploy_ec2.sh` contiene la automatización de infraestructura (*Infrastructure as Code*) diseñada para levantar el microservicio de manera instantánea en instancias **AWS EC2**, permitiendo que los sistemas corporativos (CRM/ERP) consuman las predicciones en tiempo real vía HTTP.

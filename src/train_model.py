@@ -5,6 +5,7 @@ from sklearn.compose import ColumnTransformer
 from sklearn.metrics import f1_score, roc_auc_score
 from lightgbm import LGBMClassifier
 from data_prep import prep_data
+import joblib
 
 def train_and_evaluate():
     # 1. Obtener datos limpios
@@ -52,6 +53,12 @@ def train_and_evaluate():
         if current_f1 > best_f1:
             best_f1 = current_f1
             best_thresh = thresh
+
+    # 6. Persistencia del Modelo B2B
+    joblib.dump(preprocessor, 'src/preprocessor.joblib')
+    joblib.dump(lgbm, 'src/lgbm_model.joblib')
+    print("Activos exportados exitosamente (.joblib) para consumo en API.")
+
 
     print(f"ROC-AUC Score: {roc_auc:.4f}")
     print(f"F1-Score Máximo: {best_f1:.4f} (Usando umbral optimizado de {best_thresh:.2f})")

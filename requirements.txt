@@ -4,3 +4,6 @@ scikit-learn
 lightgbm
 matplotlib
 seaborn
+joblib
+fastapi
+uvicorn

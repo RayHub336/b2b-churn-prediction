@@ -1,4 +1,4 @@
-# Optimización de Retención B2C: Predicción de Churn mediante Machine Learning
+# Motor Predictivo de Churn para Retención B2B (FastAPI / Docker)
 
 ## 1. Desafío de Negocio (Define)
 La pérdida de clientes (*Churn*) representa una fuga de capital directo y un incremento en el Costo de Adquisición de Clientes (CAC). El objetivo de este proyecto es transicionar de una retención reactiva a una **retención proactiva**, desarrollando un modelo predictivo capaz de identificar anticipadamente a los usuarios en riesgo de abandono.

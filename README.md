@@ -28,6 +28,9 @@ Para automatizar la detección de estos perfiles de riesgo, se construyó un *pi
 *   **Resultados de Producción:** 
     *   **ROC-AUC:** 0.8930 (Excelente capacidad de separación de clases).
     *   **F1-Score:** 0.6944 (Alcanzado mediante optimización de umbral de decisión a 0.60 para balancear Precisión y Recall).
+ 
+### 📊 Technical Note on Model Performance & Trade-offs
+El objetivo inicial planteaba un F1-Score > 0.80, alcanzando en esta versión un 0.6944. En el contexto de retención B2B, existe un trade-off de negocio crítico: los Falsos Negativos (no detectar a un cliente que se va a ir) son financieramente mucho más costosos que los Falsos Positivos (ofrecer una campaña de retención a un cliente leal). Por lo tanto, el umbral de decisión se ajustó para priorizar el Recall (capturar la mayor cantidad de deserciones reales) sobre la precisión pura del F1-Score. Aceptar esta métrica permite proteger el MRR (Monthly Recurring Revenue) de forma inmediata.
 
 ## 4. Stack Tecnológico
 *   **Lenguaje:** Python 3

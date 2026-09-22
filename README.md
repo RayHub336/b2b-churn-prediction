@@ -39,3 +39,9 @@ El objetivo inicial planteaba un F1-Score > 0.80, alcanzando en esta versión un
 
 ## 5. Arquitectura de Despliegue (AWS EC2)
 El modelo está industrializado mediante **FastAPI** y empaquetado en un contenedor de **Docker**. El archivo `deploy_ec2.sh` contiene la automatización de infraestructura (*Infrastructure as Code*) diseñada para levantar el microservicio de manera instantánea en instancias **AWS EC2**, permitiendo que los sistemas corporativos (CRM/ERP) consuman las predicciones en tiempo real vía HTTP.
+
+### 💼 Business Impact & What I Would Do Next
+
+Business Impact: Permite a los equipos de ventas y Customer Success identificar proactivamente cuentas B2B en riesgo antes de que cancelen el servicio, protegiendo el flujo de ingresos.
+
+Next Steps for Iteration: (1) Implementar SMOTE para manejar el desbalanceo severo de clases. (2) Transicionar a un modelo basado en árboles (XGBoost) para capturar relaciones no lineales más complejas y subir el F1-Score por encima de 0.80.

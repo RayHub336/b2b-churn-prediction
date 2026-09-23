@@ -57,7 +57,10 @@ curl -X 'POST' \
   "monthly_charges": 89.50,
   "tech_support_calls": 3
 }'
+```
 
+**Model Response (JSON):**
+```json
 {
   "client_id": "C-98342",
   "churn_prediction": 1,
@@ -65,9 +68,10 @@ curl -X 'POST' \
   "risk_level": "Critical",
   "business_action": "Trigger automated retention campaign (Discount Tier 1)"
 }
+```
 
 ### 💼 Business Impact & What I Would Do Next
 
-Business Impact: Permite a los equipos de ventas y Customer Success identificar proactivamente cuentas B2B en riesgo antes de que cancelen el servicio, protegiendo el flujo de ingresos.
+**Business Impact:** Permite a los equipos de ventas y Customer Success identificar proactivamente cuentas B2B en riesgo antes de que cancelen el servicio, protegiendo el flujo de ingresos.
 
-Next Steps for Iteration: (1) Implementar SMOTE para manejar el desbalanceo severo de clases. (2) Transicionar a un modelo basado en árboles (XGBoost) para capturar relaciones no lineales más complejas y subir el F1-Score por encima de 0.80.
+**Next Steps for Iteration:** (1) Implementar SMOTE para manejar el desbalanceo severo de clases. (2) Transicionar a un modelo basado en árboles (XGBoost) para capturar relaciones no lineales más complejas y subir el F1-Score por encima de 0.80.

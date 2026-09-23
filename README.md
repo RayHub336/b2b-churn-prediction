@@ -40,6 +40,24 @@ El objetivo inicial planteaba un F1-Score > 0.80, alcanzando en esta versión un
 ## 5. Arquitectura de Despliegue (AWS EC2)
 El modelo está industrializado mediante **FastAPI** y empaquetado en un contenedor de **Docker**. El archivo `deploy_ec2.sh` contiene la automatización de infraestructura (*Infrastructure as Code*) diseñada para levantar el microservicio de manera instantánea en instancias **AWS EC2**, permitiendo que los sistemas corporativos (CRM/ERP) consuman las predicciones en tiempo real vía HTTP.
 
+### 🚀 API Endpoint Demo (No installation required)
+
+Para facilitar la validación técnica del microservicio desplegado en AWS EC2, a continuación se muestra la estructura de interacción con la API de FastAPI. Los sistemas ERP/CRM pueden consumir el modelo enviando un payload en formato JSON.
+
+**Sample Request (cURL):**
+```bash
+curl -X 'POST' \
+  'http://<AWS_EC2_IP>:8000/predict_churn' \
+  -H 'accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "client_id": "C-98342",
+  "contract_type": "Month-to-month",
+  "tenure_months": 12,
+  "monthly_charges": 89.50,
+  "tech_support_calls": 3
+}'
+
 ### 💼 Business Impact & What I Would Do Next
 
 Business Impact: Permite a los equipos de ventas y Customer Success identificar proactivamente cuentas B2B en riesgo antes de que cancelen el servicio, protegiendo el flujo de ingresos.

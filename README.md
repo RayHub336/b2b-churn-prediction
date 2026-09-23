@@ -58,6 +58,14 @@ curl -X 'POST' \
   "tech_support_calls": 3
 }'
 
+{
+  "client_id": "C-98342",
+  "churn_prediction": 1,
+  "churn_probability": 0.84,
+  "risk_level": "Critical",
+  "business_action": "Trigger automated retention campaign (Discount Tier 1)"
+}
+
 ### 💼 Business Impact & What I Would Do Next
 
 Business Impact: Permite a los equipos de ventas y Customer Success identificar proactivamente cuentas B2B en riesgo antes de que cancelen el servicio, protegiendo el flujo de ingresos.
